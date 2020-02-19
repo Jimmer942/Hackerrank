@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+
+import sys
+
+
+t = int(input().strip())
+for a0 in range(t):
+    n = int(input().strip())
+    s0 = 0
+    s1 = 1
+    suma = 0
+    for i in range(n):
+        f = s1 + s0
+        s0 = s1
+        s1 = f
+        if f > n:
+            break
+        if f % 2 == 0:
+            suma += f
+    print(suma)
+    suma = 0
